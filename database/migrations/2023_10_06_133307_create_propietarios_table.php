@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('propietarios', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nombre');
+            $table->string('documento');
+            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('email');
         });
     }
-
     /**
      * Reverse the migrations.
      */

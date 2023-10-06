@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('automovils', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('marca');
+            $table->string('modelo');
+            $table->string('color');
+            $table->string('tipo');
+            $table->string('placa');
+            $table->bigInteger('idpropietario')->unsigned();
+
+            $table->foreign('idpropietario')->references('id')->on('propietarios');
         });
     }
 
