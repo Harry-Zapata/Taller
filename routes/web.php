@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PropietarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "Hello World";
+Route::get('/welcome', function () {
+    return view('welcome');
 });
+
+Route::get('home', [PropietarioController::class, 'home']);
