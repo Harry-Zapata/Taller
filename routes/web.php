@@ -22,5 +22,8 @@ Route::get('home', [PropietarioController::class, 'home']);
 Route::prefix('propietario')->group(function () {
     Route::get('add', [PropietarioController::class, 'vistaadd']);
     Route::post('insert', [PropietarioController::class, 'add']);
-    Route::delete('borrar/{id}', [PropietarioController::class, 'borrar']);
+    Route::get('borrar/{id}', [PropietarioController::class, 'delete']);
+    Route::get('edit/{id}', [PropietarioController::class, 'update']);
+    Route::post('update/{id}', [PropietarioController::class, 'edit']);
+    Route::get('read/{id}', [PropietarioController::class, 'read']);
 });
