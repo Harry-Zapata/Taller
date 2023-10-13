@@ -28,4 +28,10 @@ class PropietarioController extends Controller
             $propietario->save();
             return redirect('/home')->with('info','Propietario Guardado');
     }
+
+    public function borrar($id){
+        $propietario = Propietario::findOrFail($id);
+        $propietario->delete();
+        return redirect('/home')->with('info','Propietario Eliminado');
+    }
 }

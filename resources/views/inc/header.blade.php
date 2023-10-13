@@ -23,12 +23,12 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <a href="{{ url('/') }}">
+                        <a href="{{ url('/home') }}">
                             <h2>Laravel <b>Crud</b> App</h2>
                         </a>
                     </div>
                     <div class="col-sm-6">
-                        <a href="{{ url('/add') }}" class="btn btn-success"><i class="material-icons">&#xE147;</i>
+                        <a href="{{ url('/propietario/add') }}" class="btn btn-success"><i class="material-icons">&#xE147;</i>
                             <span>Agregar Propietario</span></a>
                     </div>
                 </div>
